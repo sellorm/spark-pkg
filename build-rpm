@@ -12,6 +12,7 @@ fpm -s dir -t rpm -C ./slash/ \
     --iteration 1 \
     --depends 'jre >= 1.8.0' \
     --after-install 'slash/opt/spark/extras/after-install.sh' \
+    --after-remove 'slash/opt/spark/extras/after-remove.sh' \
     --vendor 'sellorm' \
     --license 'Apache V2' \
     --maintainer 'spark@5vcc.com' \

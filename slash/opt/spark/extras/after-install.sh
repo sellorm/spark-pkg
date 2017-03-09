@@ -6,5 +6,7 @@ useradd spark
 
 source /etc/profile.d/spark.sh
 
+cp /opt/spark/extras/spark.service /usr/lib/systemd/system/
+
 echo 0
 

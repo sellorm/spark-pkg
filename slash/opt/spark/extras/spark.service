@@ -1,0 +1,8 @@
+[Unit]
+Description=Spark Service
+
+[Service]
+ExecStart=/bin/bash -c "/opt/spark/extras/spark-start"
+
+[Install]
+WantedBy=multiuser.target
