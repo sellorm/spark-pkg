@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# A spark start wrapper script that uses ENV Vars and wraps th shipped scripts
+if [[ -z ${SPARK_SERVER} ]]; then
+    echo '$SPARK_SERVER not set'
+    exit 1
+elif [[ -z ${SPARK_HOST} ]]; then
+    echo '$SPARK_HOST not set'
+    exit 1
+fi
+
+if [[ ${SPARK_SERVER} == 'slave' ]];then
+    if [[ -z ${SPARK_MASTER} ]]; then
+        echo '$SPARK_SERVER is slave, but $SPARK_MASTER not set'
+        exit 1
+    fi
+fi
+
+    
