@@ -9,7 +9,7 @@ untar spark 2.0.2 into slash/opt/spark/ using:
 then run:
 
 ```
-build-rpm local
+./build-rpm local
 ```
 
 Or, to run in a docker container use:
