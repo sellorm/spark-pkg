@@ -5,7 +5,9 @@ if [[ ${fpmExists} -ne 0 ]];then
     exit 1
 fi
 
-cd /build
+if [[ $1 != "local" ]]; then
+  cd /build
+fi
 
 fpm -s dir -t rpm -C ./slash/ \
     --verbose \
@@ -20,12 +22,5 @@ fpm -s dir -t rpm -C ./slash/ \
     --maintainer 'spark@5vcc.com' \
     --url 'https://github.com/sellorm/spark-pkg' \
     --description "Packaged version of Apache Spark" .
-
-
-
-
-
-
-
 
 # rpm -qpRi --provides --scripts ./apache_spark-2.0.2-1.x86_64.rpm
