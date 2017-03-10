@@ -5,6 +5,8 @@ if [[ ${fpmExists} -ne 0 ]];then
     exit 1
 fi
 
+cd /build
+
 fpm -s dir -t rpm -C ./slash/ \
     --verbose \
     --name apache-spark \
