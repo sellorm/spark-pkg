@@ -10,6 +10,6 @@ RUN yum install -y ruby-devel
 RUN gem install fpm
 
 RUN mkdir /build
-VOLUME /build
+
 
 ENTRYPOINT /bin/bash
