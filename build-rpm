@@ -6,7 +6,7 @@ if [[ ${fpmExists} -ne 0 ]];then
 fi
 
 if [[ $1 != "local" ]]; then
-  cd /build
+  cd /build || exit 1
 fi
 
 fpm -s dir -t rpm -C ./slash/ \
